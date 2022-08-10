@@ -1,0 +1,25 @@
+<div class="box-search">
+  <h1>Fandit League</h1>
+
+  <div>
+    <nav>
+      <ul class= "navbar__list">
+          <li>
+            <a routerLink="/">Home</a>
+          </li>
+          <li>
+            <a routerLink="/search">Search</a>
+          </li>
+      </ul>
+    </nav>
+  </div>
+
+</div>
+
+<div class="container">
+
+<app-card *ngFor="let league of leagues" [league]="league"></app-card>
+</div>
+
+
+<!-- (keyup)="getLigas($event)" -->
