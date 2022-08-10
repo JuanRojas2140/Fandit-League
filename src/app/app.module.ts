@@ -9,6 +9,7 @@ import { HomeComponent } from './components/home/home.component';
 import { CardComponent } from './components/card/card.component';
 import { DetailComponent } from './components/detail/detail.component';
 import { SearchComponent } from './components/search/search.component';
+import { SearchcardComponent } from './components/searchcard/searchcard.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SearchComponent } from './components/search/search.component';
     HomeComponent,
     CardComponent,
     DetailComponent,
-    SearchComponent
+    SearchComponent,
+    SearchcardComponent
   ],
   imports: [
     BrowserModule,

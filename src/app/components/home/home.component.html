@@ -1,25 +1,29 @@
 <div class="box-search">
   <h1>Fandit League</h1>
 
-  <div>
-    <nav>
-      <ul class= "navbar__list">
-          <li>
-            <a routerLink="/">Home</a>
-          </li>
-          <li>
-            <a routerLink="/search">Search</a>
-          </li>
-      </ul>
-    </nav>
-  </div>
 
+<app-search></app-search>
+
+  <div>
+    <!-- <nav>
+      <ul class="navbar-nav">
+        <li class="nav-item" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{ exact: true }">
+            <a class="nav-link" [routerLink]="['/']">Home</a>
+        </li>
+        <li class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="nav-link" [routerLink]="['/search']">Search</a>
+        </li>
+    </ul>
+
+    </nav> -->
+  </div>
 </div>
+
 
 <div class="container">
 
-<app-card *ngFor="let league of leagues" [league]="league"></app-card>
+<app-card *ngFor="let league of data" [league]="league"></app-card>
 </div>
 
 
-<!-- (keyup)="getLigas($event)" -->
+

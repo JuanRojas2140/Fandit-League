@@ -2,7 +2,9 @@
   <img src="{{ league.league.logo }}" class="card-img-top" alt="{{league.league.name}}">
   <div class="card-body">
     <h5 class="card-title">{{ league.league.name}}</h5>
-    <a href="#" class="btn btn-primary">Details</a>
+
+
+    <a routerLink="/detail/{{league.league.id}}" routerLinkActive="active" ariaCurrentWhenActive="page">Details</a>
   </div>
 </div>
 

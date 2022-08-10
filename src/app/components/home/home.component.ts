@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+
 import { Component, OnInit } from '@angular/core';
 
 import { LigasService } from 'src/app/services/ligas.service';
@@ -10,53 +10,25 @@ import { LigasService } from 'src/app/services/ligas.service';
 })
 export class HomeComponent implements OnInit {
 
-  public leagues:any[] = [];
+  public data:any[] = [];
 
 
-  constructor(private ligasService: LigasService) { }
+  constructor(private ligasService: LigasService) {
+    // ligasService.getLigas().subscribe(res =>{
+    //   console.log(res)
+    // })
+  }
 
   ngOnInit(): void {
-    // let headers = new HttpHeaders({
-		// 	'x-rapidapi-host': 'api-football-v1.p.rapidapi.com',
-		// 	'x-rapidapi-key': '4313091ecemsh1bc9e3abb7dd834p101e7fjsn527e2c52866f'
-		// });
-		// this.http
-		// 	.get<any>('https://api-football-v1.p.rapidapi.com/v3/leagues?', {
-		// 		headers: headers
-		// 	})
-		// 	.subscribe(data => {
-    //     this.leagues = data.response
-		// 	});
-
+   this.getLigas()
   }
 
   getLigas(){
     this.ligasService.getLigas().subscribe(data =>{
       console.log(data)
-      this.leagues= data.response;
+      this.data= data.response;
       ;
 
     })
   }
-
-  // getLiga(event: Event){
-  //   let headers = new HttpHeaders({
-	// 		'x-rapidapi-host': 'api-football-v1.p.rapidapi.com',
-	// 		'x-rapidapi-key': '4313091ecemsh1bc9e3abb7dd834p101e7fjsn527e2c52866f'
-	// 	});
-
-  //   this.http
-  //   .get<any>('https://api-football-v1.p.rapidapi.com/v3/leagues?', {
-  //     headers: headers
-  //   })
-  //   .subscribe(data => {
-  //     console.log(data);
-  //   });
-  // }
-
-
-
 }
-
-// private http: HttpClient, public header: HttpHeaders esto iba en el constructor
-// public ligasService: LigasService esto iba en el constructor nuevo

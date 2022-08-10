@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DetailComponent } from './components/detail/detail.component';
 import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
 
 const routes: Routes = [
-  {path: '', pathMatch: "full", component: HomeComponent},
-  {path:'search', component:SearchComponent},
+  {path: "", component: HomeComponent},
+  {path:"search", component:SearchComponent},
+  {path:"detail/:id", component:DetailComponent},
 ];
 
 @NgModule({
