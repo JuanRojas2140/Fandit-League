@@ -14,9 +14,7 @@ export class HomeComponent implements OnInit {
 
 
   constructor(private ligasService: LigasService) {
-    // ligasService.getLigas().subscribe(res =>{
-    //   console.log(res)
-    // })
+
   }
 
   ngOnInit(): void {
